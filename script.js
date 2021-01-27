@@ -6,26 +6,16 @@ let isGameOver = false;
 let rotation = 0;
 let position = 12;
 let score = 0;
-<<<<<<< HEAD
 let lives = 5;
 let dificulty = 4000;
 var opacity = 1;
 var blinkCount = 0;
 
-=======
-let lives = 10;
-let dificulty = 6000;
-var opacity = 0;
->>>>>>> f2b3719cd76e4717e59b93a29cb05bba6164172d
 
 function handleKeyUp(event){
     if(event.keyCode == 32){
         if (!isJumping){
             jump();
-<<<<<<< HEAD
-=======
-            //dinoBlink();
->>>>>>> f2b3719cd76e4717e59b93a29cb05bba6164172d
         }
     } 
     if (event.keyCode == 81){
@@ -69,7 +59,6 @@ function rotate(){
 }
 
 function dinoBlink() {
-<<<<<<< HEAD
     let blinkInterval = setInterval(() => {
         if(blinkCount > 39){
             clearInterval(blinkInterval);
@@ -84,16 +73,6 @@ function dinoBlink() {
         }
         console.log(blinkCount);
     }, 10);
-=======
-    if (opacity<1) {
-       opacity += .1;
-       setTimeout(function(){dinoBlink()},100);
-       console.log(opacity);
-    } else if (opacity >= 1){
-        opacity = 0;
-    }
-    dino.style.opacity = opacity;
->>>>>>> f2b3719cd76e4717e59b93a29cb05bba6164172d
     
  }
 
@@ -110,11 +89,7 @@ function createCactus(){
     background.appendChild(cactus);
 
     let leftTimer = setInterval(() => {
-<<<<<<< HEAD
         if(score >= 100) {
-=======
-        if(score >= 300) {
->>>>>>> f2b3719cd76e4717e59b93a29cb05bba6164172d
             clearInterval(leftTimer);
             isGameOver = true;
             document.body.innerHTML = '<h2 class="congratulations">CONGRATULATIONS! YOU BEAT THE GAME!</h1>'
@@ -124,11 +99,7 @@ function createCactus(){
             background.removeChild(cactus);
             dificulty -= 10;
             score+=10;
-<<<<<<< HEAD
             updateScore();
-=======
-            updateScore(true);
->>>>>>> f2b3719cd76e4717e59b93a29cb05bba6164172d
         } else if (cactusPosition > 0 && cactusPosition <60 && position < 68){
             if (lives <= 1){
                 clearInterval(leftTimer);
@@ -140,23 +111,15 @@ function createCactus(){
                 clearInterval(leftTimer);
                 background.removeChild(cactus);
                 lives--;
-<<<<<<< HEAD
                 updateScore();
                 dinoBlink();
                 blinkCount = 0;
-=======
-                updateScore(false);
->>>>>>> f2b3719cd76e4717e59b93a29cb05bba6164172d
             }
         }else {
             cactusPosition -= 10;
             cactus.style.left = cactusPosition + 'px';
         }
     }, 20)
-<<<<<<< HEAD
-=======
- 
->>>>>>> f2b3719cd76e4717e59b93a29cb05bba6164172d
     setTimeout(createCactus, randomTime);
 }
 createCactus();
