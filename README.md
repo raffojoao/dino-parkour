@@ -1,2 +1,3 @@
 # dino-parkour
-A very simple clone of the classic Running dinossaur game
+
+This is a simple clone of Chrome Running Dinosaur Game I made to study JavaScript, HTML5 and CSS3.
