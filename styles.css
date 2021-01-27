@@ -42,7 +42,11 @@ body {
     background-image: url('dino.png');
     position: absolute;
     bottom: 12px;
+<<<<<<< HEAD
     transition: transform 0.4s ease-in, opacity 0.2s;
+=======
+    transition: transform 0.4s ease-in;
+>>>>>>> f2b3719cd76e4717e59b93a29cb05bba6164172d
 }
 
 .cactus {
