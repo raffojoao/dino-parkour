@@ -1,0 +1,90 @@
+body {
+    background: #fafafa;
+
+}
+
+#title{
+    margin-top: 60px;
+    font-family: Arial;
+    font-style: bold;
+    color: #666666;
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.score{
+    text-transform: uppercase;
+    font-family: Arial;
+    color:#666666;
+    font-size: 40px;
+    text-align: justify;
+    border: 3px solid #666666;
+    border-radius: 5px;
+    margin-right: 80%;
+    margin-left: 10px;
+}
+
+.instructions{
+    font-family: Arial;
+    color:#666666;
+    font-size: 20px;
+    text-align: justify;
+    border: 3px solid #666666;
+    border-radius: 5px;
+    margin-right: 76%;
+    margin-left: 10px;
+}
+
+
+.dino {
+    width: 60px;
+    height: 60px;
+    background-image: url('dino.png');
+    position: absolute;
+    bottom: 12px;
+    transition: transform 0.4s ease-in, opacity 0.2s;
+}
+
+.cactus {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 8px;
+    background-image: url('cactus.png');
+}
+
+.game-over {
+    text-align: center;
+    color: #666666;
+    margin-top: 60px;
+    font-family: arial;
+    font-size: 60px;
+}
+
+.congratulations {
+    text-align: center;
+    color: #666666;
+    margin-top: 60px;
+    font-family: arial;
+    font-size: 60px;
+}
+
+@keyframes slideright{
+    from{
+        background-position: 70000%;
+    }
+    to{
+        background-position: 0;
+    }
+    
+}
+
+.background{
+    position: absolute;
+    bottom: 0;
+    background-image: url('background.png');
+    background-repeat: repeat-x;
+    animation: slideright 1150s infinite linear;
+    width: 100%;
+    height: 200px;
+}
